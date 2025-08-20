@@ -1,0 +1,284 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0d0d0d;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #111;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  flex-wrap: wrap; /* for small screens */
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4caf50;
+}
+
+nav {
+  width: auto;
+}
+
+nav a {
+  margin: 0 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #4caf50;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: left;
+  gap: 40px;
+  padding: 50px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero img {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border: 4px solid #4caf50;
+  box-shadow: 0 0 15px #4caf50;
+  transition: transform 0.3s ease;
+}
+
+.hero img:hover {
+  transform: scale(1.05);
+}
+
+.hero-text {
+  flex: 1;
+}
+
+/* Explore button */
+.hero-text .btn {
+  margin-top: 25px;
+}
+
+/* Buttons */
+.btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 25px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 10px #4caf50;
+}
+
+.btn:hover {
+  background-color: #45a049;
+  box-shadow: 0 0 15px #4caf50;
+}
+
+/* Contact Info */
+.contact-info p {
+  margin: 8px 0;
+}
+
+.contact-info a {
+  color: #4caf50;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #66ff99;
+}
+
+/* Sections */
+section {
+  padding: 80px 50px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #4caf50;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Lists in projects/skills */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Internship Section */
+#internship ul {
+  list-style: none;
+  padding: 0;
+}
+
+#internship li {
+  margin-bottom: 20px;
+  line-height: 1.8;
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+  transition: transform 0.3s ease;
+}
+
+#internship li:hover {
+  transform: translateY(-5px);
+}
+
+#internship li strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #4caf50;
+  font-size: 1.1rem;
+}
+
+/* Contact Form */
+form {
+  max-width: 500px;
+  margin: auto;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+form input[type="submit"] {
+  display: block;
+  margin: 20px auto 0 auto;
+  width: auto;
+  padding: 12px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+form input[type="submit"]:hover {
+  background-color: #45a049;
+  box-shadow: 0 0 15px #4caf50;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #111;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries for Mobile & Tablets */
+@media screen and (max-width: 1024px) {
+  .hero {
+    gap: 30px;
+    padding: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .hero img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  nav {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 10px 8px;
+  }
+
+  section {
+    padding: 50px 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 15px;
+  }
+}
