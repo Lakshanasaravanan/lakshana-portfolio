@@ -5,29 +5,57 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Projects - Lakshana Saravanan</title>
 <link rel="stylesheet" href="style.css">
+
 <style>
-  /* Extra spacing between list items */
+  #projects {
+    padding: 40px;
+  }
+
+  #projects h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
   #projects ul {
     list-style: none;
     padding: 0;
+    max-width: 900px;
+    margin: auto;
   }
 
   #projects li {
+    background: #1e1e1e;
+    padding: 20px;
     margin-bottom: 20px;
+    border-radius: 12px;
     line-height: 1.6;
+    transition: 0.3s;
+  }
+
+  #projects li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   }
 
   #projects li strong {
-    color: #4caf50; /* Highlight project titles */
+    color: #4caf50;
+    font-size: 18px;
+  }
+
+  .tech {
+    font-size: 14px;
+    color: #bbb;
+    margin-top: 5px;
   }
 </style>
 </head>
+
 <body>
 
 <header>
   <div class="logo">PORTFOLIO</div>
   <nav>
-   <a href="index.html">Home</a>
+    <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="projects.html">Projects</a>
     <a href="internship.html">Internship</a>
@@ -39,17 +67,31 @@
   <section id="projects">
     <h2>My Projects</h2>
     <ul>
+
       <li>
-        <strong>Health Insurance Cost Prediction:</strong> Developed a machine learning model to estimate insurance premiums based on factors like age, lifestyle, and medical history, helping users plan finances effectively.
-      </li>
-      
-      <li>
-        <strong>Travel Website:</strong> Designed and built a responsive website showcasing destinations, travel packages, and booking features for a seamless user experience.
+        <strong>PDF Summarizer & Translator Chatbot</strong>
+        <div class="tech">Python • Streamlit • NLP • Transformers</div>
+        Built an AI-powered chatbot that processes PDF documents, generates concise summaries, and enables interactive Q&A with multilingual translation support.
       </li>
 
       <li>
-        <strong>Doctor Appointment Booking System:</strong> Created a web-based platform that allows patients to schedule, manage, and cancel appointments with doctors efficiently.
+        <strong>Health Insurance Cost Prediction</strong>
+        <div class="tech">Python • Scikit-learn • Pandas • Streamlit</div>
+        Developed a machine learning model to predict insurance costs using demographic and lifestyle data. Applied preprocessing, feature engineering, and compared multiple models for accuracy.
       </li>
+
+      <li>
+        <strong>CareCloud – Mental Wellness Web App</strong>
+        <div class="tech">HTML • CSS • JavaScript</div>
+        Designed an interactive wellness platform with guided activities, timers, repetition tracking, and background audio for improved user engagement.
+      </li>
+
+      <li>
+        <strong>Zenlyt – Study Time Tracker</strong>
+        <div class="tech">React Native • FastAPI • JavaScript</div>
+        Built a mobile app to track focused study sessions, analyze productivity, and manage session history using a clean and minimal dashboard.
+      </li>
+
     </ul>
   </section>
 </main>
